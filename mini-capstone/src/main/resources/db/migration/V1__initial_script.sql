@@ -19,7 +19,8 @@ CREATE TABLE jeff.PRODUCTS (
                                    price float,
                                    ratings float,
                                    type varchar(150),
-                                   description text,
+                                   filter varchar(150),
+                                   description varchar,
                                    created_date TIMESTAMP WITH TIME ZONE,
                                    modified_date TIMESTAMP WITH TIME ZONE,
                                    PRIMARY KEY (product_id)
