@@ -21,23 +21,23 @@ import java.util.UUID;
 @Table(schema = SchemaConfiguration.SCHEMA_NAME, name = "PRODUCTS")
 public class ProductEntity {
     @Id
-    private UUID product_id;
-    private String  product_name;
-    private String image_link;
+    private UUID productId;
+    private String productName;
+    private String imageLink;
     private float price;
     private float ratings;
     private String type;
     private String filter;
     private String description;
-    private ZonedDateTime created_date;
-    private ZonedDateTime modified_date;
+    private ZonedDateTime createdDate;
+    private ZonedDateTime modifiedDate;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
         ProductEntity that = (ProductEntity) o;
-        return product_id != null && Objects.equals(product_id, that.product_id);
+        return productId != null && Objects.equals(productId, that.productId);
     }
 
     @Override
