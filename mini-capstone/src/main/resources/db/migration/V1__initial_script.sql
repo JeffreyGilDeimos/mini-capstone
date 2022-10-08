@@ -41,6 +41,7 @@ CREATE TABLE jeff.BLOGS (
                                 blog_name varchar(150),
                                 blog_author varchar(150),
                                 image_link varchar(150),
+                                description varchar,
                                 created_date TIMESTAMP WITH TIME ZONE,
                                 modified_date TIMESTAMP WITH TIME ZONE,
                                 PRIMARY KEY (blog_id)

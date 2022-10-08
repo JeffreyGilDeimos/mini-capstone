@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/product")
@@ -25,6 +26,12 @@ public class ProductController {
     public List<ProductDTO> addProduct(@RequestBody ProductRequest productRequest) {
         return productService.addProduct(productRequest);
     }
+    @DeleteMapping("/delete/{productId}")
+    public List<ProductDTO> deleteProduct(@PathVariable UUID productId) {
+
+        return productService.deleteProduct(productId);
+    }
 
 
 }
+

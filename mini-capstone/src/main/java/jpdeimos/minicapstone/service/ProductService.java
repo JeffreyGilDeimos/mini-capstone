@@ -2,6 +2,7 @@ package jpdeimos.minicapstone.service;
 
 import jpdeimos.minicapstone.dto.ProductDTO;
 import jpdeimos.minicapstone.entity.ProductEntity;
+import jpdeimos.minicapstone.exception.UserAlreadyExist;
 import jpdeimos.minicapstone.model.ProductRequest;
 import jpdeimos.minicapstone.repository.ProductRepository;
 import jpdeimos.minicapstone.util.DateTimeUtil;
@@ -53,6 +54,20 @@ public class ProductService {
                 .createdDate(dateTimeUtil.currentDate())
                 .modifiedDate(dateTimeUtil.currentDate())
                 .build());
+
+        return getAllProducts();
+    }
+
+    public List<ProductDTO> deleteProduct(UUID productId) {
+
+        // Get products
+        ProductEntity product = productRepository.findByProductId(productId);
+
+        // Check if product exist
+        if(product == null) throw new UserAlreadyExist("Product doesn't exist");
+
+        // Delete product
+        productRepository.deleteByProductId(productId);
 
         return getAllProducts();
     }
