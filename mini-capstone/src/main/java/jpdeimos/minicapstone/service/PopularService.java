@@ -47,6 +47,7 @@ public class PopularService {
                 .productName(newPopular.getProductName())
                 .imageLink(null)
                 .price(newPopular.getPrice())
+                .type(newPopular.getType())
                 .createdDate(dateTimeUtil.currentDate())
                 .modifiedDate(dateTimeUtil.currentDate())
                 .build());

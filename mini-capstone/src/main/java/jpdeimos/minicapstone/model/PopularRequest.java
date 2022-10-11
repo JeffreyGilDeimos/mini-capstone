@@ -12,5 +12,6 @@ public class PopularRequest {
 
     private String productName;
     private float price;
+    private String type;
 
 }

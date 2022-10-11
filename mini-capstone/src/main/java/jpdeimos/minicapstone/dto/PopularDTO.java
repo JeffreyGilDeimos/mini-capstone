@@ -12,6 +12,7 @@ public class PopularDTO {
     private String productName;
     private String imageLink;
     private float price;
+    private String type;
     private ZonedDateTime createdDate;
     private ZonedDateTime modifiedDate;
 

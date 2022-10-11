@@ -31,6 +31,7 @@ CREATE TABLE jeff.POPULAR (
                                   product_name varchar(150),
                                   image_link varchar(150),
                                   price float,
+                                  type varchar(150),
                                   created_date TIMESTAMP WITH TIME ZONE,
                                   modified_date TIMESTAMP WITH TIME ZONE,
                                   PRIMARY KEY (product_id)
